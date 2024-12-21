@@ -25,7 +25,9 @@ public class SplashActivity extends AppCompatActivity {
 
                 try {
                     sleep(3000);
-                    startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                    Intent i = new Intent(SplashActivity.this, MainActivity.class);
+                  //  i.putExtra("name", "Football Teams");
+                    startActivity(i);
                 } catch (InterruptedException e) {
                     //Log log;
                    // log.e("Rabbi", e.getMessage());
