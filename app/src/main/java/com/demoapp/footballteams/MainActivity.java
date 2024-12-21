@@ -16,8 +16,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    String[] country = {"Bangladesh","Brazil","Argentina","Portugal"};
-    String[] coach = {"Javier Fernández Cabrera Martín Peñato", "Dorival Júnior", "Lionel Scaloni", "Roberto Martínez"};
+    String[] country = {
+            "Bangladesh","Brazil","Argentina","Portugal",
+            "Brazil","Argentina","Portugal",
+            "Brazil","Argentina","Portugal",
+            "Brazil","Argentina","Portugal",
+            "Brazil","Argentina","Portugal",
+            "Brazil","Argentina","Portugal",
+            "Brazil","Argentina","Portugal"
+    };
+
+    String[] coach = {
+            "Javier Fernández Cabrera Martín Peñato", "Dorival Júnior", "Lionel Scaloni", "Roberto Martínez"
+
+    };
+
     int[] flag = {R.drawable.bangladesh1, R.drawable.brazil, R.drawable.argentina, R.drawable.portugal};
 
     ListView lstCountryList;
@@ -56,7 +69,8 @@ public class MainActivity extends AppCompatActivity {
                 ImageView img = view.findViewById(R.id.img);
                 txtCountry.setText(country[position]);
                 txtCoach.setText(coach[position]);
-                img.setImageDrawable(flag[position]);    
+                // for using the image resource ID from the flag array, we cant use image drawable here as it is INT id
+                img.setImageResource(flag[position]);
 
                 return view;
             }
@@ -66,7 +80,8 @@ public class MainActivity extends AppCompatActivity {
         lstCountryList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Intent i = new Intent(MainActivity.this, );
+                Intent i = new Intent(MainActivity.this, PlayersActivity.class);
+                i.putExtra("CountryName", country[position]);
                 startActivity(i);
             }
         });
