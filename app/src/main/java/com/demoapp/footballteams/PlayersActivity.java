@@ -30,7 +30,7 @@ public class PlayersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_players);
 
         String passedData = getIntent().getStringExtra("CountryName");
-        getSupportActionBar().setTitle(passedData);
+//        getSupportActionBar().setTitle(passedData);
 
         lstPlayersList = findViewById(R.id.lst_players);
 

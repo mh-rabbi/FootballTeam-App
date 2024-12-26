@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     String[] country = {
-            "Bangladesh","Brazil","Argentina","Portugal",
+            "Bangladesh","Brazil","Argentina",
             "Brazil","Argentina","Portugal",
             "Brazil","Argentina","Portugal",
             "Brazil","Argentina","Portugal",
@@ -27,11 +27,25 @@ public class MainActivity extends AppCompatActivity {
     };
 
     String[] coach = {
-            "Javier Fernández Cabrera Martín Peñato", "Dorival Júnior", "Lionel Scaloni", "Roberto Martínez"
+            "Javier Fernández Cabrera Martín Peñato", "Dorival Júnior", "Lionel Scaloni",
+            "Javier Fernández Cabrera Martín Peñato", "Dorival Júnior", "Lionel Scaloni",
+            "Javier Fernández Cabrera Martín Peñato", "Dorival Júnior", "Lionel Scaloni",
+            "Javier Fernández Cabrera Martín Peñato", "Dorival Júnior", "Lionel Scaloni",
+            "Javier Fernández Cabrera Martín Peñato", "Dorival Júnior", "Lionel Scaloni",
+            "Javier Fernández Cabrera Martín Peñato", "Dorival Júnior", "Lionel Scaloni",
+            "Javier Fernández Cabrera Martín Peñato", "Dorival Júnior", "Lionel Scaloni",
 
     };
 
-    int[] flag = {R.drawable.bangladesh1, R.drawable.brazil, R.drawable.argentina, R.drawable.portugal};
+    int[] flag = {
+            R.drawable.brazil, R.drawable.argentina, R.drawable.portugal,
+            R.drawable.brazil, R.drawable.argentina, R.drawable.portugal,
+            R.drawable.brazil, R.drawable.argentina, R.drawable.portugal,
+            R.drawable.brazil, R.drawable.argentina, R.drawable.portugal,
+            R.drawable.brazil, R.drawable.argentina, R.drawable.portugal,
+            R.drawable.brazil, R.drawable.argentina, R.drawable.portugal,
+            R.drawable.brazil, R.drawable.argentina, R.drawable.portugal
+    };
 
     ListView lstCountryList;
 
