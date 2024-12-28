@@ -47,6 +47,16 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.brazil, R.drawable.argentina, R.drawable.portugal
     };
 
+    String[][] players = {
+            {"Player1", "Player2", "Player3"},  // Bangladesh
+            {"Player1", "Player2", "Player3"},  // Brazil
+            {"Player1", "Player2", "Player3"},   // Argentina
+            {"Player1", "Player2", "Player3"},   // Argentina
+            {"Player1", "Player2", "Player3"},   // Argentina
+            {"Player1", "Player2", "Player3"},   // Argentina
+            {"Player1", "Player2", "Player3"}   // Argentina
+    };
+
     ListView lstCountryList;
 
     @Override
@@ -64,12 +74,12 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public Object getItem(int i) {
+            public Object getItem(int position) {
                 return null;
             }
 
             @Override
-            public long getItemId(int i) {
+            public long getItemId(int position) {
                 return 0;
             }
 
@@ -81,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 TextView txtCountry = view.findViewById(R.id.txt_country);
                 TextView txtCoach = view.findViewById(R.id.txt_coach);
                 ImageView img = view.findViewById(R.id.img);
+
                 txtCountry.setText(country[position]);
                 txtCoach.setText(coach[position]);
                 // for using the image resource ID from the flag array, we cant use image drawable here as it is INT id
@@ -96,6 +107,9 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Intent i = new Intent(MainActivity.this, PlayersActivity.class);
                 i.putExtra("CountryName", country[position]);
+                i.putExtra("Flag", flag[position]);
+                i.putExtra("Players", players[position]);
+
                 startActivity(i);
             }
         });
