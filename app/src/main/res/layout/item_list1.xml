@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/img"
         android:layout_width="80dp"
-        android:layout_height="match_parent"/>
+        android:layout_height="80dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,17 +18,18 @@
 
         <TextView
             android:id="@+id/txt_country"
+            android:text="rabbi"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_margin="-8dp"
+            android:layout_height="40dp"
             android:textColor="#08766C"
             android:textSize="25sp" />
 
         <TextView
             android:id="@+id/txt_coach"
+            android:text="istiak"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:textColor="#FFFFFF"
+            android:textColor="#DBC92B"
             android:textSize="15sp" />
 
     </LinearLayout>

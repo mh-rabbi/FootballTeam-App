@@ -48,8 +48,20 @@ public class MainActivity extends AppCompatActivity {
     };
 
     String[][] players = {
-            {"Player1", "Player2", "Player3"},  // Bangladesh
-            {"Player1", "Player2", "Player3"},  // Brazil
+            // Bangladesh
+            {"Shahidul Alam", "Pritom Kumer", "Tarek Raihan", "Mustafa Muntasir", "Jewel Rana",
+            "Jamaldin Mollah", "Mohammad Atique", "Nasir Uddin", "Sohag Kazi", "Ariful Islam",
+            "Mahmudul Hasan", "Masuk Mia", "Moshiur Rahman", "Shamsul Haque", "Rokibul Hassan",
+            "Rajon Shikder", "Ashraful Alam", "Koushik Sarkar", "Saddam Hossain", "Mokhlesur Rahman",
+            "Zahid Hossain", "Rakibul Islam", "Mohiuddin Mollah", "Shakil Ahmed", "Shahriar Alam",
+            "Abu Musa", "Ali Hossain", "Shahidul Islam", "Poyel Hossain", "Rahmat Ali", "Tariq Ahmed"},
+            // Brazil
+            {"Shahidul Alam", "Pritom Kumer", "Tarek Raihan", "Mustafa Muntasir", "Jewel Rana",
+                    "Jamaldin Mollah", "Mohammad Atique", "Nasir Uddin", "Sohag Kazi", "Ariful Islam",
+                    "Mahmudul Hasan", "Masuk Mia", "Moshiur Rahman", "Shamsul Haque", "Rokibul Hassan",
+                    "Rajon Shikder", "Ashraful Alam", "Koushik Sarkar", "Saddam Hossain", "Mokhlesur Rahman",
+                    "Zahid Hossain", "Rakibul Islam", "Mohiuddin Mollah", "Shakil Ahmed", "Shahriar Alam",
+                    "Abu Musa", "Ali Hossain", "Shahidul Islam", "Poyel Hossain", "Rahmat Ali", "Tariq Ahmed"},
             {"Player1", "Player2", "Player3"},   // Argentina
             {"Player1", "Player2", "Player3"},   // Argentina
             {"Player1", "Player2", "Player3"},   // Argentina

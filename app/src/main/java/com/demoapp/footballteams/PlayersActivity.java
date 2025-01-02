@@ -2,6 +2,7 @@ package com.demoapp.footballteams;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -12,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.demoapp.footballteams.Adapter.PlayersAdapter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -41,11 +44,12 @@ public class PlayersActivity extends AppCompatActivity {
 //        String passedData = getIntent().getStringExtra("CountryName");
 //        getSupportActionBar().setTitle(passedData);
 
-        img = findViewById(R.id.img);
-        txtCountry =findViewById(R.id.txt_country);
+        img = findViewById(R.id.img_itemFlag);
+        txtCountry =findViewById(R.id.txt_itemCountry);
         lstPlayers = findViewById(R.id.lst_players);
 
         String countryName = getIntent().getStringExtra("CountryName");
+        Log.e("RABBI", countryName);
         int flagId = getIntent().getIntExtra("Flag", -1);
         String[] players = getIntent().getStringArrayExtra("Players");
 
@@ -56,11 +60,9 @@ public class PlayersActivity extends AppCompatActivity {
 
        // ArrayAdapter myAdapter = new ArrayAdapter(PlayersActivity.this, android.R.layout.simple_list_item_1,Players );
 
-        //lstPlayers.setAdapter(myAdapter);
+        //lstPlayers.setAdapter(myAdapter)
 
-        // Populate players list
-        ArrayList<String> playerList = new ArrayList<>(Arrays.asList(players));
-        com.demoapp.footballteams.PlayersAdapter adapter = new com.demoapp.footballteams.PlayersAdapter(this, playerList);
+        PlayersAdapter adapter = new PlayersAdapter(PlayersActivity.this, players);
         lstPlayers.setAdapter(adapter);
 
     }
